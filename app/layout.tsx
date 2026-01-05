@@ -11,8 +11,12 @@ export const metadata: Metadata = {
   description:
     "Al-Birr Charity Foundation channels Zakat and Sadaqah to vulnerable Muslims in Northern Uganda with transparent, faith-rooted impact.",
   metadataBase:
-    typeof (process.env.NEXT_PUBLIC_SITE_URL ?? process.env.NEXT_PUBLIC_BASE_URL) === "string"
-      ? new URL(process.env.NEXT_PUBLIC_SITE_URL ?? process.env.NEXT_PUBLIC_BASE_URL)
+    process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_BASE_URL
+      ? new URL(
+          process.env.NEXT_PUBLIC_SITE_URL ||
+            process.env.NEXT_PUBLIC_BASE_URL ||
+            "http://localhost:3000",
+        )
       : undefined,
   icons: {
     icon: "/al-bir.svg",
