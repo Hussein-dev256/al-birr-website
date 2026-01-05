@@ -78,22 +78,34 @@ function SiteHeader() {
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium text-zinc-100 md:flex">
           <Link
-            href="#home"
+            href="/#home"
             className="transition hover:text-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             Home
           </Link>
           <Link
-            href="#our-programs"
+            href="/#about"
+            className="transition hover:text-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+          >
+            About Us
+          </Link>
+          <Link
+            href="/#our-programs"
             className="transition hover:text-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             Our Programs
           </Link>
           <Link
-            href="#impact"
+            href="/#impact"
             className="transition hover:text-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           >
             Impact
+          </Link>
+          <Link
+            href="/#recent-works"
+            className="transition hover:text-amber-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+          >
+            Recent Works
           </Link>
           <Link
             href="/our-director"
@@ -157,7 +169,7 @@ function SiteFooter() {
             <ul className="mt-3 space-y-2">
               <li>
                 <Link
-                  href="#home"
+                  href="/#home"
                   className="transition hover:text-amber-300"
                 >
                   Home
@@ -165,7 +177,7 @@ function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="#our-programs"
+                  href="/#our-programs"
                   className="transition hover:text-amber-300"
                 >
                   Our Programs
@@ -173,7 +185,7 @@ function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="#impact"
+                  href="/#impact"
                   className="transition hover:text-amber-300"
                 >
                   Our Impact
@@ -181,7 +193,7 @@ function SiteFooter() {
               </li>
               <li>
                 <Link
-                  href="#recent-works"
+                  href="/#recent-works"
                   className="transition hover:text-amber-300"
                 >
                   Recent Works
@@ -207,26 +219,60 @@ function SiteFooter() {
           </div>
           <div>
             <h3 className="text-[11px] font-semibold uppercase tracking-[0.25em] text-emerald-300">
-              Social
+              Our Contacts
             </h3>
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {[
-                "Facebook",
-                "Twitter",
-                "Instagram",
-                "YouTube",
-                "TikTok",
-              ].map((platform) => (
-                <li key={platform}>
-                  <a
-                    href="#"
-                    aria-label={platform}
-                    className="inline-flex items-center justify-center rounded-full border border-slate-700 px-3 py-1 text-[11px] font-medium text-zinc-200 transition hover:border-emerald-400 hover:text-emerald-200"
-                  >
-                    {platform}
-                  </a>
-                </li>
-              ))}
+            <ul className="mt-3 space-y-2">
+              <li>
+                <a
+                  href="/contact"
+                  aria-label="Contact"
+                  className="transition hover:text-amber-300"
+                >
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:info@al-birr.org"
+                  aria-label="Email"
+                  className="transition hover:text-amber-300"
+                >
+                  Email
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://facebook.com/albirrcharity"
+                  aria-label="Facebook"
+                  className="transition hover:text-amber-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/albirrcharity"
+                  aria-label="Twitter"
+                  className="transition hover:text-amber-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tiktok.com/@albirrcharity"
+                  aria-label="TikTok"
+                  className="transition hover:text-amber-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  TikTok
+                </a>
+              </li>
             </ul>
           </div>
         </div>

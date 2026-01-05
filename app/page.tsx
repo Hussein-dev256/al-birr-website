@@ -8,10 +8,11 @@ export default function Home() {
         <HeroSection />
         <QuranicAnchorSection />
         <AboutSection />
+        <DirectorPreviewSection />
         <ProgramsSection />
         <ImpactSection />
+        <ImpactImageSliderSection />
         <AllocationSection />
-        <DirectorPreviewSection />
         <PhotoReportsSection />
         <FinalCTASection />
       </div>
@@ -57,12 +58,12 @@ function HeroSection() {
         </p>
       </div>
       <div className="relative mt-12 lg:mt-0 lg:w-1/2">
-        <div className="relative mx-auto w-full max-w-sm rounded-[2.5rem] border border-emerald-400/40 bg-emerald-950/40 p-3 shadow-[0_0_60px_rgba(16,185,129,0.65)]">
+        <div className="relative mx-auto w-full max-w-md rounded-[2.5rem] border border-emerald-400/40 bg-emerald-950/40 p-4 shadow-[0_0_80px_rgba(16,185,129,0.7)]">
           <div className="overflow-hidden rounded-[2rem] bg-emerald-950/60">
             <Image
-              src="/wheelchair.webp"
-              alt="Volunteer offering support to a child using a wheelchair in a community setting."
-              width={640}
+              src="/bash.webp"
+              alt="Portrait from Al-Birr's work in Northern Uganda."
+              width={800}
               height={800}
               className="h-full w-full object-cover"
               priority
@@ -98,8 +99,8 @@ function QuranicAnchorSection() {
         وَمَا تُقَدِّمُوا لِأَنفُسِكُم مِّنْ خَيْرٍ تَجِدُوهُ عِندَ اللَّهِ
       </p>
       <p className="mt-4 text-lg text-emerald-100 sm:text-xl">
-        "Whatever good you send ahead for yourselves, you will find it with
-        Allah."
+        &quot;Whatever good you send ahead for yourselves, you will find it
+        with Allah.&quot;
       </p>
       <p className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-zinc-200 sm:text-base">
         Giving through Al-Birr is an opportunity to answer the dua of families
@@ -137,21 +138,15 @@ function AboutSection() {
         </p>
       </div>
       <div className="space-y-4 rounded-2xl bg-slate-950/70 p-6">
-        <h3 className="text-base font-semibold text-emerald-100">
-          Safeguarding the people we serve
-        </h3>
-        <ul className="space-y-3 text-sm text-zinc-200">
-          <li>
-            Images are shared with consent and without names or exact
-            locations.
-          </li>
-          <li>
-            Stories focus on context and dignity, not shock or spectacle.
-          </li>
-          <li>
-            Program reports and community feedback guide every intervention.
-          </li>
-        </ul>
+        <div className="relative h-64 w-full overflow-hidden rounded-xl bg-slate-900/80">
+          <Image
+            src="/About us.webp"
+            alt="Scenes from Al-Birr's work in Northern Uganda."
+            fill
+            className="object-cover"
+            sizes="(min-width: 1024px) 320px, 100vw"
+          />
+        </div>
       </div>
     </section>
   );
@@ -301,12 +296,12 @@ function ImpactSection() {
           </article>
         ))}
       </div>
-      <div className="space-y-3 rounded-3xl bg-emerald-50/5 p-6 ring-1 ring-emerald-900/40">
+      <div className="space-y-3 rounded-3xl bg-emerald-50/5 p-6 text-center ring-1 ring-emerald-900/40">
         <p className="text-sm font-semibold text-emerald-200" lang="ar">
           وَأَنفِقُوا مِمَّا رَزَقْنَاكُم
         </p>
         <p className="text-sm text-emerald-100">
-          "And spend from that which We have provided for you." (Qur&apos;an 63:10)
+          &quot;And spend from that which We have provided for you.&quot; (Qur&apos;an 63:10)
         </p>
         <p className="text-xs text-zinc-200 sm:text-sm">
           We regard every donation as a trust (amanah). Impact figures are based
@@ -338,6 +333,92 @@ function ImpactSection() {
         >
           See Our Recent Work
         </Link>
+      </div>
+    </section>
+  );
+}
+
+function ImpactImageSliderSection() {
+  const slides = [
+    {
+      src: "/image-slider1.webp",
+      alt: "Qur'ans being provided to Muslim communities.",
+      caption: "Providing Qur'ans to Muslim communities to strengthen iman.",
+    },
+    {
+      src: "/image-slider2.webp",
+      alt: "Preparing beef portions for distribution on Eid al-Adha.",
+      caption: "Preparing to supply beef to Muslims on Eid al-Adha.",
+    },
+    {
+      src: "/image-slider3.webp",
+      alt: "Construction work taking place at a mosque in Unyama.",
+      caption: "Mosque construction in Unyama.",
+    },
+    {
+      src: "/image-slider4.webp",
+      alt: "Construction works for the Al-Birr offices in Gulu.",
+      caption: "Construction of Al-Birr offices, Gulu.",
+    },
+    {
+      src: "/image-slider5.webp",
+      alt: "Building works for the Al-Birr orphanage in Gulu.",
+      caption: "Construction of Al-Birr orphanage, Gulu.",
+    },
+    {
+      src: "/image-slider6.webp",
+      alt: "Water source area prepared for wudu.",
+      caption: "Water source made accessible for wudu.",
+    },
+    {
+      src: "/image-slider7.webp",
+      alt: "Muslim family engaged in an empowerment activity.",
+      caption: "Empowering Muslim families.",
+    },
+    {
+      src: "/image-slider8.webp",
+      alt: "Mosque building serving the local community.",
+      caption: "Mosque supporting a local Muslim community.",
+    },
+  ];
+
+  const loopSlides = [...slides, ...slides];
+
+  return (
+    <section className="space-y-8">
+      <div className="space-y-2 text-center">
+        <h2 className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-300">
+          From the Field
+        </h2>
+        <p className="mx-auto max-w-3xl text-sm text-zinc-200 sm:text-base">
+          Glimpses from recent work in Northern Uganda, shown with care for the
+          dignity and privacy of each person.
+        </p>
+      </div>
+      <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-slate-950/70 p-6">
+        <div className="impact-slider-track">
+          {loopSlides.map((slide, index) => (
+            <article
+              key={`${slide.src}-${index}`}
+              className="relative flex w-80 shrink-0 flex-col overflow-hidden rounded-2xl border border-emerald-900/60 bg-slate-900/70 shadow-md shadow-emerald-900/60"
+            >
+              <div className="relative h-56 w-full overflow-hidden">
+                <Image
+                  src={slide.src}
+                  alt={slide.alt}
+                  fill
+                  sizes="320px"
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex flex-1 flex-col justify-between p-4">
+                <p className="text-xs text-zinc-100 sm:text-sm">
+                  {slide.caption}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -449,13 +530,14 @@ function DirectorPreviewSection() {
           Read the Director&apos;s Message
         </Link>
       </div>
-      <div className="flex items-center justify-center">
-        <div className="relative h-56 w-56 overflow-hidden rounded-full border border-emerald-500/60 bg-emerald-950/60 shadow-[0_0_50px_rgba(16,185,129,0.65)]">
-          <Image
-            src="/file.svg"
-            alt="Portrait placeholder for the Director of Al-Birr Charity Foundation."
-            fill
-            className="object-contain p-10"
+        <div className="flex items-center justify-center">
+          <div className="relative h-64 w-64 overflow-hidden rounded-full border border-emerald-500/60 bg-emerald-950/60 shadow-[0_0_60px_rgba(16,185,129,0.75)]">
+            <Image
+              src="/Director.webp"
+              alt="Portrait of the Director of Al-Birr Charity Foundation."
+              fill
+              className="object-cover"
+            style={{ objectPosition: "center top" }}
           />
         </div>
       </div>
@@ -481,9 +563,10 @@ function PhotoReportsSection() {
       caption: "Supplies arranged for families that have been screened for support.",
     },
     {
-      src: "/charity4.webp",
+      src: "/charity5.webp",
       alt: "Outdoor scene from a recent charity activity.",
-      caption: "Scenes from recent work carried out with local communities in Northern Uganda.",
+      caption:
+        "Scenes from recent work carried out with local communities in Northern Uganda.",
     },
   ];
 

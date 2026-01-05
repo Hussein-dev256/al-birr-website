@@ -15,3 +15,18 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes impact-slider-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.impact-slider-track {
+  display: flex;
+  gap: 1rem;
+  animation: impact-slider-marquee 40s linear infinite;
+}
