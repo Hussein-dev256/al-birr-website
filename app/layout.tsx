@@ -11,9 +11,14 @@ export const metadata: Metadata = {
   description:
     "Al-Birr Charity Foundation channels Zakat and Sadaqah to vulnerable Muslims in Northern Uganda with transparent, faith-rooted impact.",
   metadataBase:
-    typeof process.env.NEXT_PUBLIC_SITE_URL === "string"
-      ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
+    typeof (process.env.NEXT_PUBLIC_SITE_URL ?? process.env.NEXT_PUBLIC_BASE_URL) === "string"
+      ? new URL(process.env.NEXT_PUBLIC_SITE_URL ?? process.env.NEXT_PUBLIC_BASE_URL)
       : undefined,
+  icons: {
+    icon: "/al-bir.svg",
+    shortcut: "/al-bir.svg",
+    apple: "/al-bir.svg",
+  },
   openGraph: {
     type: "website",
     title: "Al-Birr Charity Foundation",
@@ -21,12 +26,21 @@ export const metadata: Metadata = {
       "Support vulnerable Muslims in Northern Uganda through secure Zakat and Sadaqah.",
     url: "/",
     siteName: "Al-Birr Charity Foundation",
+    images: [
+      {
+        url: "/al-bir.svg",
+        width: 1024,
+        height: 1024,
+        alt: "Al-Birr Charity Foundation logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Al-Birr Charity Foundation",
     description:
       "Secure, faith-aligned giving for vulnerable Muslims in Northern Uganda.",
+    images: ["/al-bir.svg"],
   },
 };
 

@@ -77,7 +77,7 @@ export async function POST(request: Request) {
       customizations: {
         title: "Al-Birr Foundation Donation",
         description: `${donationType.toUpperCase()} Donation`,
-        logo: "https://al-birr.org/logo.png", // Replace with actual logo URL if available
+        logo: `${process.env.NEXT_PUBLIC_SITE_URL || process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"}/al-bir.svg`,
       },
       meta: {
         donation_type: donationType,
