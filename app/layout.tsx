@@ -251,7 +251,7 @@ function SiteFooter() {
               </li>
               <li>
                 <a
-                  href="mailto:info@al-birr.org"
+                  href="mailto:albirrcharityorg@gmail.com"
                   aria-label="Email"
                   className="transition hover:text-amber-300"
                 >
@@ -260,7 +260,7 @@ function SiteFooter() {
               </li>
               <li>
                 <a
-                  href="https://facebook.com/albirrcharity"
+                  href="https://www.facebook.com/share/1C9mSWv5dd/"
                   aria-label="Facebook"
                   className="transition hover:text-amber-300"
                   target="_blank"
